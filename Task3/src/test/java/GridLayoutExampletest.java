@@ -35,7 +35,7 @@ public class GridLayoutExampletest {
     void testFrameProperties(){
         GridLayoutExample frame = new GridLayoutExample();
 
-        assertEquals(JFrame.EXIT_ON_CLOSE,frame.getDefaultCloseOperation(),"Frame should be set to EXIT_ON_CLOSE.");
+        assertEquals(javax.swing.WindowConstants.EXIT_ON_CLOSE,frame.getDefaultCloseOperation(),"Frame should be set to EXIT_ON_CLOSE.");
         assertTrue(frame.getWidth()>0 && frame.getHeight()>0,"Frame should have a size set.");
     }
 }
