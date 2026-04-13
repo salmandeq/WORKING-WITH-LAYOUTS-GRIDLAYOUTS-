@@ -12,13 +12,13 @@ public class GridLayoutExampleTest {
      void testGridLayoutInitialization(){
         GridLayoutExample frame = new GridLayoutExample();
 
-        assertEquals("GridLayout Example - 1*3 Panels",frame.getTitle(),"Title should match the constructor setting.");
+        assertEquals("GridLayout Example - 2*3 Panels",frame.getTitle(),"Title should match the constructor setting.");
 
         Container contenPane =frame.getContentPane();
         assertTrue(contenPane.getLayout() instanceof GridLayout,"layout Should be Gridlayout");
 
         GridLayout layout = (GridLayout) contenPane.getLayout();
-        assertEquals(1,layout.getRows(), "should have 1 row.");
+        assertEquals(2,layout.getRows(), "should have 2 row.");
         assertEquals(3,layout.getColumns(), " should have 3 columns.");
 
         Component[] components=contenPane.getComponents();
