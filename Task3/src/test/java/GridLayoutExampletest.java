@@ -22,7 +22,7 @@ public class GridLayoutExampletest {
         assertEquals(3,layout.getColumns(), " should have 3 columns.");
 
         Component[] components=contenPane.getComponents();
-        assertEquals(3,components.length, "Ther should be exacly 3 panels added.");
+        assertEquals(6,components.length, "Ther should be exacly 6 panels added.");
 
         assertEquals(Color.RED,components[0].getBackground(),"First panel should be RED.");
         assertEquals(Color.GREEN,components[1].getBackground(),"Second panel should be GREEN.");
