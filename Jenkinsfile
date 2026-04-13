@@ -9,14 +9,15 @@ pipeline {
     stages {
         stage('Build & Test') {
             steps {
-                // The -f flag tells Maven where the pom.xml is
-                sh 'mvn -f Task3/pom.xml clean test'
+                // Use 'bat' instead of 'sh' for Windows
+                bat 'mvn clean test'
             }
         }
     }
 
     post {
         always {
+            // This will now find the results once the 'bat' command runs successfully
             junit '**/target/surefire-reports/*.xml'
         }
     }
