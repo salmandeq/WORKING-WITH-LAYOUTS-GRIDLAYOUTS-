@@ -39,3 +39,4 @@ public class GridLayoutExampleTest {
         assertTrue(frame.getWidth()>0 && frame.getHeight()>0,"Frame should have a size set.");
     }
 }
+"Moving test file to correct Maven directory"
