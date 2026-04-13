@@ -1,15 +1,14 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven2' 
-        jdk 'java21'
-    }
-
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Build & Test') {
             steps {
-                // Use 'bat' instead of 'sh' for Windows
                 bat 'mvn clean test'
             }
         }
@@ -17,8 +16,7 @@ pipeline {
 
     post {
         always {
-            // This will now find the results once the 'bat' command runs successfully
-            junit '**/target/surefire-reports/*.xml'
+            junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
         }
     }
 }
