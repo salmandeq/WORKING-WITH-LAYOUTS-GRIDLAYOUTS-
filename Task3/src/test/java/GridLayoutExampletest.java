@@ -7,7 +7,7 @@ import java.awt.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class GridLayoutExampletest {
+public class GridLayoutExampleTest {
     @Test
      void testGridLayoutInitialization(){
         GridLayoutExample frame = new GridLayoutExample();
